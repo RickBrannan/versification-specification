@@ -99,7 +99,7 @@ def parse_books(directory):
     """
 
     for file in sorted(os.listdir(directory)):
-        if file.endswith(".usx"):
+        if file.endswith(".usfm.xml"):
             root = etree.parse(directory+file)
             for book in root.iter('book'):
                 book_identifier = book.get('code')
